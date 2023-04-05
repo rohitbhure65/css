@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_header {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(1, 119, 255);
+}
+.main_header h1 {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+.main_header h1:hover {
+  color: black;
+}
+.main_header h1::after {
+  content: " vrcoder";
+}
+.main_header p {
+  color: #bbbbbb;
+  font-size: 1rem;
+}
+.main_header p:hover {
+  color: black;
+}/*# sourceMappingURL=main.css.map */

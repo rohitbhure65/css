@@ -1,0 +1,48 @@
+// partials
+@import "var"; // @import "_var.scss";
+@import "mixin";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// LEARNING SCSS 
+// 1. oprators
+// 2. variables
+// 3. nesting
+// 4. mixin
+// 5. parameter
+// 6. partials
+
+.main_header {
+    // mixin 
+    @include flexbox;
+    width: 100vw;
+    height: 100vh;
+    background: $bg-color;
+
+    // nesting
+    h1 {
+        // mixin with parameter
+        @include commoncode(2rem, rgb(255, 255, 255));
+
+        // inherit .main_header h1:hover
+        &:hover {
+            color: black;
+        }
+
+        &::after {
+            content: ' vrcoder';
+        }
+    }
+
+    p {
+        @include commoncode(1rem, #bbbbbb);
+
+        &:hover {
+            color: black;
+        }
+    }
+}
