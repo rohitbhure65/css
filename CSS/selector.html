@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector</title>
+    <style>
+        /*universal selector*/
+        *{
+            padding: 0;margin: 0;
+        }
+        /*elementer selector*/
+        p, a{
+            color: green;
+        }
+        li{
+            list-style: none;
+        }
+        /*class selector*/
+        .liclass{
+            color: red;
+        }
+        span.liclass{
+            font-weight: 700;
+        }
+        /*Descendent combinator*/
+        li em{
+            color: yellow;
+        }
+        /*adjacent combinator*/
+        h3+p{
+            font-size: 200%;
+        }
+        /*pseudo class selector*/
+        a:hover{
+            color: red;
+            text-decoration: none;
+        }
+
+        body h3+p .liclass{
+            color: yellow;
+            background-color: black;
+            padding: 5px;
+        }
+        /*id selector*/
+        #first{
+            color: red;
+        }
+        h4#first{
+            background-color: black;
+        }
+        /*Attribute selector*/
+        li[class]{
+            font-size: 200%;
+        }
+        li[class="a"]{
+            color: yellow;
+        }
+        li[class~="a"]{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h4 id="first">Lorem ipsum dolor sit amet.</h4>
+    <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <em> blogging </em></h3>
+    <p>Lorem ipsum dolor sit amet, <span class="liclass"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span> consectetur adipisicing elit. <a href="/">link</a> Nam sit deleniti cupiditate reprehenderit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam sit deleniti cupiditate reprehenderit.</p>
+
+    <ul>
+        <li class="liclass">item1</li>
+        <li class="a b">item2</li>
+        <li class="a">item3 <em>hello</em></li>
+        <li class="a">item3 <em>hello</em></li>
+    </ul>
+
+</body>
+</html>
